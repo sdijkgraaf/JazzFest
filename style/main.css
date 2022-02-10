@@ -1,0 +1,640 @@
+* {
+    /* Lege ruimte aan de randen */
+    margin: 0;
+    /* Ruimte tussen element en de inhoud van dat element */
+    padding: 0;
+    /* Lettertype */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Background image */
+    background-image: url("img/pizza.png");
+}
+
+body {
+    /* Achtergrond kleur door kleurcode  */
+    background-color: #f6d19b;
+}
+
+.image {
+    /*  */
+    display: block;
+    /* Breedte van de afbeelding */
+    width: 200%;
+    /* Hoogte van de afbeelding */
+    height: auto;
+    /* Afstand linkers van element */
+    margin-left: auto;
+    /* Afstand rechts van element */
+    margin-right: auto;
+}
+
+.overlay {
+    /* Positie van de overlay */
+    position: absolute;
+    /* Afstand tot de bovenkant */
+    top: 0;
+    /* Afstand tot de onderkant */
+    bottom: 0;
+    /* Afstand tot links */
+    left: 0;
+    /* Afstand tot rechts */
+    right: 0;
+    /* Hoogte van de overlay */
+    height: 100%;
+    /* Breedte van de overlay */
+    width: 200%;
+    /* Transparantheid */
+    opacity: 0;
+    transition: .8s ease;
+    /* Achtergrond kleur door kleurcode */
+    background-color: rgba(221, 100, 90, .8);
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay_about {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 200%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(221, 100, 90, .7);
+}
+
+.container:hover .overlay_about {
+    opacity: 1;
+}
+
+.text {
+    /* Kleur van tekst in naam kleur */
+    color: white;
+    /* Lettertype groote */
+    font-size: 50px;
+    /* Positie van de tekst */
+    position: absolute;
+    /* Afstand tot de bovenkant */
+    top: 50%;
+    /* Afstand tot links */
+    left: 50%;
+    /* hoe de tekst wordt laten zien */
+    transform: translate(-50%, -50%);
+    /* Uitlijnen van de tekst */
+    text-align: center;
+}
+
+ul {
+    /* weergave van de markering van een onderdeel van een lijst */
+    list-style-type: none;
+    /* Lege ruimte aan de randen */
+    margin: 0;
+    /* Lettertype */
+    padding: 0;
+    /* Instellen wat er gebeurt als element te lang is */
+    overflow: hidden;
+    /* achtergrond kleur code */
+    background-color: #739998;
+}
+
+li {
+    /* Geeft aan hoe een element moet zweven */
+    float: left;
+    padding-left: 12px;
+}
+
+li a {
+    display: block;
+    color: #cce8e7;
+    text-align: center;
+    padding: 16px;
+    /* decoratie tekst */
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #dd645a;
+}
+
+
+/* Opmaak van heel veel classes */
+
+.unico_menu {
+    margin-left: 0px;
+    height: 50px;
+    width: 75px;
+}
+
+.vestigingen {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.menukaart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.italian_about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 70%;
+    height: auto;
+}
+
+.video_about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 70%;
+    height: auto;
+}
+
+.text_about {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: black;
+}
+
+.text_about_img {
+    font-size: 1.8rem;
+}
+
+.pizza_contact {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+    width: 50%;
+}
+
+.contact {
+    display: block;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_form {
+    display: block;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.book {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 25px;
+    margin-right: auto;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+.submit_contact {
+    margin-bottom: 30px;
+}
+
+.text_working {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    text-align: center;
+    max-width: 700px;
+}
+
+.pizza_working {
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    transition: width 2s;
+}
+
+.pizza_working:hover {
+    width: 500px;
+    height: 391px;
+}
+
+.text_message {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Opmaak footer */
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: #4f7a7e;
+}
+
+footer .content {
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .content p,
+a {
+    color: #cce8e7;
+}
+
+footer .content .box {
+    width: 33%;
+    transition: all 0.4s ease;
+}
+
+footer .content .topic {
+    font-size: 22px;
+    font-weight: 600;
+    color: #abbebe;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+footer .bottom {
+    width: 100%;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+    border-radius: 2px;
+    padding-top: 10px;
+}
+
+.italian_footer {
+    width: 40%;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+/* eigenschappen van de body */
+
+body {
+    background: #f6d19b;
+}
+
+
+/* Opmaak form */
+
+form {
+    max-width: 420px;
+    margin: auto;
+}
+
+
+/* Opmaak feedback-input */
+
+.feedback-input {
+    color: grey;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background: whitesmoke;
+    border: 2px solid #CC6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    width: 100%;
+}
+
+.feedback-input:focus {
+    border: 2px solid #CC4949;
+}
+
+.form2 {
+    height: auto;
+}
+
+
+/*besturingselement voor tekstinvoer met meerdere regels */
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="submit"] {
+    width: 100%;
+    background: #CC6666;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+[type="submit"]:hover {
+    background: #CC4949;
+}
+
+input {
+    /* Style van randen van element */
+    border: 1px solid #c4c4c4;
+    /* Bepaald hoeken van element */
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 190px;
+}
+
+
+/* normale tekst */
+
+label {
+    display: block;
+}
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+html body [data-ca3_iconfont="ETmodules"]::before {
+    font-family: "ETmodules";
+}
+
+[data-ca3_icon]::before {
+    font-weight: normal;
+    content: attr(data-ca3_icon);
+}
+
+.ca3-scroll-down-arrow {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+    background-size: contain;
+    /*Hoe de achtergrondafbeelding wordt herhaald*/
+    background-repeat: no-repeat;
+}
+
+
+/* Style van naar beneden scrollen na plaatje*/
+
+.ca3-scroll-down-link {
+    cursor: pointer;
+    height: 60px;
+    width: 80px;
+    margin: 0px 0 0 -40px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    color: red;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
+    -moz-animation: ca3_fade_move_down 2s ease-in-out infinite;
+    animation: ca3_fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+
+@-webkit-keyframes ca3_fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes ca3_fade_move_down {
+    0% {
+        -moz-transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes ca3_fade_move_down {
+    0% {
+        transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+
+/* Het uiterlijk van een knop */
+
+.submit_knop {
+    background: #CC6666;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    transition: all 0.3s;
+    margin-top: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 100%;
+    max-width: 420px;
+}
+
+.submit_knop:hover {
+    background: #CC4949;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: #dd645a;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #658d91;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #4f7a7e;
+}
+
+.button {
+    background: green;
+    padding: 1em 2em;
+    color: white;
+    border: 0;
+}
+
+.button:hover {
+    background: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #04AA7D;
+    margin: 5% auto;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.text_modal {
+    font-weight: 600;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 23px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.agendatabel {
+    border: 1px solid white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelkop {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+th {
+    border: 1px solid black;
+    height: 25px;
+    background-color: #4f7a7e;
+    color: whitesmoke;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.bijbaan_festival {
+    width: 10%;
+    margin-left: auto;
+    margin-right: 65.5%;
+    margin-top: 3%;
+}
+
+.programma {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.mySlides {
+    display: block;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}

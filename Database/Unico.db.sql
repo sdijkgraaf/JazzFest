@@ -1,0 +1,48 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "persons" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT NOT NULL,
+	"lastname"	TEXT,
+	"phonenumber"	INTEGER,
+	"e-mail"	INTEGER,
+	"age"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+CREATE TABLE IF NOT EXISTS "Duos" (
+	"person1_id"	INTEGER,
+	"person2_id"	INTEGER,
+	FOREIGN KEY("person1_id") REFERENCES "Employees"("id")
+);
+CREATE TABLE IF NOT EXISTS "reservations" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"date"	TEXT NOT NULL,
+	"group_size"	INTEGER NOT NULL,
+	"time"	TEXT NOT NULL,
+	"personID"	INTEGER,
+	"tableID"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("personID") REFERENCES "persons",
+	FOREIGN KEY("tableID") REFERENCES "Tables"("id")
+);
+CREATE TABLE IF NOT EXISTS "Tables" (
+	"id"	INTEGER UNIQUE,
+	"size"	INTEGER,
+	"employeeID"	INTEGER,
+	PRIMARY KEY("id")
+);
+CREATE TABLE IF NOT EXISTS "Employees" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"e_name"	INTEGER,
+	"e_lastname"	INTEGER,
+	"e_phonenumber"	INTEGER,
+	"new"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+INSERT INTO "persons" VALUES (1,'Jan','De Boer',634281766,NULL,NULL);
+INSERT INTO "persons" VALUES (2,'Frans','Johanssen',63944229393,NULL,NULL);
+INSERT INTO "reservations" VALUES (1,'23-12-1978',5,'10.15',2,NULL);
+INSERT INTO "reservations" VALUES (2,'18-10-2005',4,'12.00',1,NULL);
+INSERT INTO "reservations" VALUES (3,'23-12-1978',5,'10.15',NULL,NULL);
+INSERT INTO "reservations" VALUES (4,'23-12-1978',5,'10.15',NULL,NULL);
+INSERT INTO "reservations" VALUES (5,'23-12-1978',5,'10.15',NULL,NULL);
+COMMIT;

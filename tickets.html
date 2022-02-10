@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- De karakter-set -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- Titel naam in tablad-->
+    <title>Festival Unico</title>
+    <link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location" />
+    <!-- De delen passen aan tegen de aspect ratio van het scherm -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- alle style onderdelen staan in CSS bestand: style/main.css -->
+    <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
+    <!-- Plaatje/icoon voor in het tablad -->
+    <link rel="icon" href="img/fav.png">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <ul id=navigation-bar>
+        <!-- Logo linksboven -->
+        <li><img class=unico_menu src="img/fav.png" style="width:120%" alt=""></li>
+        <!-- Verschillende menuknoppen - linken door naar andere pagina's -->
+        <li><a class="b" href="home.html">Home</a></li>
+        <li><a class="b" href="about.html">About</a></li>
+        <li><a class="b" href="programma.html">Programma</a></li>
+        <li><a class="b" href="tickets.html">Tickets</a></li>
+        <li><a class="b" href="drankkaart.html">Drankkaart</a></li>
+        <li><a class="b" href="locations.html">Locations</a></li>
+        <li><a class="b" href="contact.html">Contact</a></li>
+        <li><a class="b" href="careers.html">Careers</a></li>
+    </ul>
+
+
+    <!-- plaatje  -->
+    <section id="section01">
+        <img class="italian_about" src="img/ticket.png" alt="">
+
+        <a href="#section02" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+    </section>
+
+    <!-- Tekst -->
+    <div class="contact">
+        <p class="text_about">
+            Bestel nu de tickets voor het Unico festival! <br>De kosten van één ticket zijn €35,- <br> Als er problemen zijn bel dan naar 030-2843100. <br> Kies uit:<br> Vrijdag 25 februari: 15:00 - 00:00<br> Zaterdag 26 februari: 12:00 - 00:00 <br> Zondag
+            27 februari: 12:00 - 00:00
+        </p>
+    </div>
+
+    <!-- Booking form -->
+    <section id="section02">
+        <div class="book">
+            <form class="form2">
+                <!-- invoer velden -->
+                <input name="name" type="text" class="feedback-input" placeholder="Naam" />
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                <input type="date" id="Reservation_date" class="feedback-input" name="Reservation date">
+                <input type="time" id="Reservation_time" class="feedback-input" name="Reservation Time">
+                <input type="text" name="example" list="group_size" class="feedback-input" placeholder="Aantal tickets">
+                <datalist id="group_size">
+                    <option value="1">  
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="6+">  
+                </datalist>
+                <!-- submit knop -->
+            </form>
+            <!-- Knop voor het openen van de Modal -->
+            <button id="modalBtn" class="submit_knop">KOOP TICKETS</button>
+        </div>
+        <!-- de modal -->
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <p class="text_modal">Success!</p>
+                <p> All information has been sent and your reservation is booked</p>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Unico is een festival ontstaan op de middelbare school, tijdens een informatica project. Sinds het onstaat van ons project een paar jaar geleden, oragniseren wij elk jaar op 25, 26 en 27 februari het festival UNICO.</p>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <p><i class="fas fa-phone-volume"></i>+030 284 3100</p>
+                    </div>
+                    <div class="email">
+                        <p><i class="fas fa-envelope"></i>info@unic-utrecht.nl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div>
+                    <p>Professional Festivaling</p>
+                </div>
+                <div>
+                    <p>Festival Building</p>
+                </div>
+                <div>
+                    <p>Website Development </p>
+                </div>
+                <div>
+                    <p>Database Development</p>
+                </div>
+                <div>
+                    <p>Customer Services</p>
+                </div>
+                <br>
+                <img class="italian_footer" src="img/jazz.png" alt="">
+            </div>
+            <div class="bottom">
+                <p>Copyright © 2021 Unico Studios All rights reserved</p><br>
+                <p> Credits to Olaf van der Hidde for contriving the name: Unico</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    var modal = document.getElementById("simpleModal");
+
+    var modalBtn = document.getElementById("modalBtn");
+
+    var closeBtn = document.getElementsByClassName("closeBtn")[0];
+
+    modalBtn.addEventListener("click", openModal);
+
+    closeBtn.addEventListener("click", closeModal);
+
+    function openModal() {
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+</script>
+
+</html>
